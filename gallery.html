@@ -3,19 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Photos from Ishani Deshpande’s experiences and interests.">
+  <meta name="description"
+        content="Photos and project materials from Ishani Deshpande’s embedded systems and age-related macular degeneration research.">
+
   <title>Gallery | Ishani Deshpande</title>
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-      margin: 10px 0 75px;
+    .gallery-section {
+      margin-bottom: 60px;
     }
 
-    .photo-card {
+    .gallery-section-heading {
+      margin-bottom: 24px;
+    }
+
+    .gallery-section-heading h2 {
+      margin-bottom: 12px;
+    }
+
+    .gallery-section-heading > p:last-child {
+      color: var(--muted);
+      max-width: 750px;
+    }
+
+    .gallery-pair {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      align-items: start;
+    }
+
+    .gallery-card {
       margin: 0;
       background: white;
       border: 1px solid var(--line);
@@ -23,36 +42,68 @@
       overflow: hidden;
     }
 
-    .photo-card a {
+    .gallery-image-link {
       display: block;
+      background: #eeece5;
+      padding: 20px;
     }
 
-    .photo-card img {
+    .gallery-image-link img {
       display: block;
       width: 100%;
-      height: 300px;
+      height: 470px;
       object-fit: contain;
-      background: #efede5;
     }
 
-    .photo-card figcaption {
-      padding: 24px;
+    .gallery-card.featured .gallery-image-link {
+      padding: 0;
     }
 
-    .photo-card h2 {
-      font-size: 23px;
+    .gallery-card.featured img {
+      height: auto;
+      max-height: 560px;
+      object-fit: contain;
+    }
+
+    .gallery-caption {
+      padding: 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    .gallery-caption .eyebrow {
       margin-bottom: 12px;
     }
 
-    .photo-card p {
-      color: var(--muted);
-      font-size: 15px;
-      margin: 0;
+    .gallery-caption h3 {
+      font-size: 25px;
+      margin-bottom: 14px;
     }
 
-    @media (max-width: 850px) {
-      .photo-grid {
+    .gallery-caption > p:last-child {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .gallery-note {
+      margin-bottom: 60px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      .gallery-pair {
         grid-template-columns: 1fr;
+      }
+
+      .gallery-image-link img {
+        height: auto;
+        max-height: 580px;
+      }
+
+      .gallery-caption {
+        padding: 22px;
       }
     }
   </style>
@@ -79,73 +130,123 @@
 
   <main id="main">
     <section class="page-heading">
-      <p class="eyebrow">Photos &amp; Experiences</p>
+      <p class="eyebrow">Research &amp; Project Materials</p>
       <h1>My Gallery</h1>
+
       <p class="lead">
-        A few photos from my experiences and interests.
-        Click a picture to view it full size.
+        A closer look at my Raspberry Pi setup and materials
+        from my project on using deep learning to detect
+        age-related macular degeneration.
       </p>
     </section>
 
-    <section class="photo-grid" aria-label="Photo gallery">
+    <section class="gallery-section"
+             aria-labelledby="embedded-heading">
 
-      <!-- PHOTO 1: Replace the title, description, and alt text. -->
-      <figure class="photo-card">
-        <a href="assets/gallery-1.jpg"
+      <div class="gallery-section-heading">
+        <p class="eyebrow">01 / Embedded Systems</p>
+        <h2 id="embedded-heading">Raspberry Pi Setup</h2>
+      </div>
+
+      <figure class="gallery-card featured">
+        <a class="gallery-image-link"
+           href="assets/rapsberrypi.png"
            target="_blank"
-           rel="noopener">
-          <img src="assets/gallery-1.jpg"
-               alt="Photo 1 — replace with a description of your picture">
+           rel="noopener"
+           aria-label="View Raspberry Pi setup image full size">
+
+          <img src="assets/rapsberrypi.png"
+               alt="Raspberry Pi connected to additional hardware and a sensor on a desk.">
         </a>
 
-        <figcaption>
-          <h2>Photo One</h2>
+        <figcaption class="gallery-caption">
+          <p class="eyebrow">Hardware Setup</p>
+          <h3>Working with Raspberry Pi</h3>
+
           <p>
-            Write a short caption explaining where this picture
-            was taken and why you included it.
+            My Raspberry Pi setup with connected hardware and
+            a sensor. Working directly with physical components
+            has given me experience with hardware connections,
+            troubleshooting, and the interaction between
+            software and embedded devices.
           </p>
         </figcaption>
       </figure>
-
-      <!-- PHOTO 2: Replace the title, description, and alt text. -->
-      <figure class="photo-card">
-        <a href="assets/gallery-2.jpg"
-           target="_blank"
-           rel="noopener">
-          <img src="assets/gallery-2.jpg"
-               alt="Photo 2 — replace with a description of your picture"
-               loading="lazy">
-        </a>
-
-        <figcaption>
-          <h2>Photo Two</h2>
-          <p>
-            Write a short caption about the experience,
-            activity, or project shown here.
-          </p>
-        </figcaption>
-      </figure>
-
-      <!-- PHOTO 3: Replace the title, description, and alt text. -->
-      <figure class="photo-card">
-        <a href="assets/gallery-3.jpg"
-           target="_blank"
-           rel="noopener">
-          <img src="assets/gallery-3.jpg"
-               alt="Photo 3 — replace with a description of your picture"
-               loading="lazy">
-        </a>
-
-        <figcaption>
-          <h2>Photo Three</h2>
-          <p>
-            Write a short caption describing this picture
-            and what it means to you.
-          </p>
-        </figcaption>
-      </figure>
-
     </section>
+
+    <section class="gallery-section"
+             aria-labelledby="amd-heading">
+
+      <div class="gallery-section-heading">
+        <p class="eyebrow">02 / Deep Learning Project</p>
+        <h2 id="amd-heading">
+          Age-Related Macular Degeneration
+        </h2>
+
+        <p>
+          A sample of my written report and the poster I created
+          to present my project.
+        </p>
+      </div>
+
+      <div class="gallery-pair">
+        <figure class="gallery-card">
+          <a class="gallery-image-link"
+             href="assets/abreport.png"
+             target="_blank"
+             rel="noopener"
+             aria-label="View AMD report sample full size">
+
+            <img src="assets/abreport.png"
+                 alt="A page from my report discussing the background of age-related macular degeneration."
+                 loading="lazy">
+          </a>
+
+          <figcaption class="gallery-caption">
+            <p class="eyebrow">Written Report</p>
+            <h3>Project Report Sample</h3>
+
+            <p>
+              An excerpt from the background section of my
+              report on using deep learning to identify
+              age-related macular degeneration. This section
+              explains the role of the macula in vision and
+              introduces the disease studied in my project.
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card">
+          <a class="gallery-image-link"
+             href="assets/AMD.png"
+             target="_blank"
+             rel="noopener"
+             aria-label="View AMD project poster full size">
+
+            <img src="assets/AMD.png"
+                 alt="My trifold project poster titled Using Deep Learning to Identify Macular Degeneration."
+                 loading="lazy">
+          </a>
+
+          <figcaption class="gallery-caption">
+            <p class="eyebrow">Project Presentation</p>
+            <h3>Research Poster</h3>
+
+            <p>
+              The poster I created to present my project,
+              “Using Deep Learning to Identify Macular
+              Degeneration.” It brings together the project’s
+              purpose, background research, methods, and data
+              models in a visual format.
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <p class="gallery-note">
+      Click any image to open the full-size version in a new tab.
+    </p>
   </main>
 
   <footer>
