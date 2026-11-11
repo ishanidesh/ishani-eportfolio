@@ -1,0 +1,29 @@
+const portfolioPages = [
+  ["index.html", "Home"],
+  ["about.html", "About"],
+  ["projects.html", "Projects"],
+  ["roadmap.html", "My Roadmap"],
+  ["resume.html", "Résumé"],
+  ["gallery.html", "Gallery"],
+  ["contact.html", "Contact"]
+];
+
+const currentPage =
+  window.location.pathname.split("/").pop() || "index.html";
+
+const navigation = document.querySelector("#site-navigation");
+
+if (navigation) {
+  portfolioPages.forEach(function ([filename, label]) {
+    const link = document.createElement("a");
+
+    link.href = filename;
+    link.textContent = label;
+
+    if (filename === currentPage) {
+      link.setAttribute("aria-current", "page");
+    }
+
+    navigation.appendChild(link);
+  });
+}
