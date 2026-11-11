@@ -1,10 +1,13 @@
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Contact Ishani Deshpande, a Computer Engineering student at Georgia Tech, by email or LinkedIn.">
-  <title>Contact | Ishani Deshpande</title>
+  <meta name="description"
+        content="Learn about Ishani Deshpande’s background and interests in computer engineering.">
+  <title>About | Ishani Deshpande</title>
   <link rel="stylesheet" href="style.css">
+  <script src="menu.js" defer></script>
 </head>
 
 <body>
@@ -13,52 +16,81 @@
   <header>
     <div class="nav-wrap">
       <a class="brand" href="index.html">ID<span>.</span></a>
-
-      <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="roadmap.html">My Roadmap</a>
-        <a href="resume.html">Résumé</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html" aria-current="page">Contact</a>
-        <a href="gallery.html">Gallery</a>
-      </nav>
+      <nav id="site-navigation" aria-label="Main navigation"></nav>
     </div>
   </header>
 
   <main id="main">
     <section class="page-heading">
-      <p class="eyebrow">Let’s Connect</p>
-      <h1>Contact Me</h1>
+      <p class="eyebrow">The Person Behind the Work</p>
+      <h1>About Me</h1>
 
       <p class="lead">
-        Feel free to reach out about research, internships,
-        or shared interests in chip design and embedded systems.
-        You can contact me by email or connect with me on LinkedIn.
+        I’m Ishani Deshpande, a Computer Engineering student
+        at Georgia Tech with an interest in chip design,
+        embedded systems, and cybersecurity.
       </p>
     </section>
 
-    <section class="contact-grid" aria-label="Contact options">
-      <a class="contact-card"
-         href="https://www.linkedin.com/in/ishani-deshpande9/"
-         target="_blank"
-         rel="noopener noreferrer">
+    <section class="split section">
+      <div class="about-photo">
+        <img
+          src="assets/P1120569.JPG"
+          alt="Ishani Deshpande outdoors on campus"
+          width="440"
+          height="500">
+      </div>
 
-        <p class="eyebrow">Professional Connections</p>
-        <h2>LinkedIn <span aria-hidden="true">↗</span></h2>
-        <p>Connect with me and learn more about my experience.</p>
-      </a>
+      <div>
+        <h2>My Background</h2>
 
-      <a class="contact-card"
-         href="mailto:ideshpande8@gatech.edu">
-
-        <p class="eyebrow">Email</p>
-        <h2>Email Me <span aria-hidden="true">↗</span></h2>
-        <p style="overflow-wrap: anywhere;">
-          ideshpande8@gatech.edu
+        <p>
+          I began my college journey at UMass Amherst before
+          transferring to Georgia Tech. Through coursework in
+          programming, digital design, physics, and mathematics,
+          I became increasingly interested in the relationship
+          between hardware and software.
         </p>
-      </a>
+
+        <p>
+          As an Undergraduate Research Intern in WPI’s Bash Lab,
+          I work with early-exit neural networks on Raspberry
+          Pi 5 platforms. My work includes benchmarking model
+          performance, measuring inference latency, and integrating
+          camera capture and image preprocessing into AI workflows.
+          This experience has helped me understand the practical
+          challenges of running machine learning applications
+          on embedded hardware.
+        </p>
+
+        <p>
+          I also gained research experience in the Punzo Lab at
+          UMass Chan Medical School, where I assisted with retinal
+          microscopy image analysis, tissue preparation, and
+          research data organization. In a separate project,
+          I developed and evaluated a deep learning model for
+          identifying age-related macular degeneration in
+          retinal images.
+        </p>
+
+        <p>
+          My chosen threads are Computer Hardware and Emerging
+          Architectures and Cybersecurity. I want to build
+          stronger hardware design skills and explore how
+          architectural decisions affect performance,
+          energy use, and security.
+        </p>
+
+        <div class="actions">
+          <a class="button" href="roadmap.html">
+            My Academic and Career Plan ↗
+          </a>
+
+          <a class="button outline" href="gallery.html">
+            View My Gallery
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
