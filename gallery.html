@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Photos from Ishani Deshpande’s experiences and interests.">
+  <title>Gallery | Ishani Deshpande</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin: 10px 0 75px;
+    }
+
+    .photo-card {
+      margin: 0;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .photo-card a {
+      display: block;
+    }
+
+    .photo-card img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+      background: #efede5;
+    }
+
+    .photo-card figcaption {
+      padding: 24px;
+    }
+
+    .photo-card h2 {
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .photo-card p {
+      color: var(--muted);
+      font-size: 15px;
+      margin: 0;
+    }
+
+    @media (max-width: 850px) {
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">ID<span>.</span></a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="roadmap.html">My Roadmap</a>
+        <a href="resume.html">Résumé</a>
+        <a href="gallery.html" aria-current="page">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-heading">
+      <p class="eyebrow">Photos &amp; Experiences</p>
+      <h1>My Gallery</h1>
+      <p class="lead">
+        A few photos from my experiences and interests.
+        Click a picture to view it full size.
+      </p>
+    </section>
+
+    <section class="photo-grid" aria-label="Photo gallery">
+
+      <!-- PHOTO 1: Replace the title, description, and alt text. -->
+      <figure class="photo-card">
+        <a href="assets/gallery-1.jpg"
+           target="_blank"
+           rel="noopener">
+          <img src="assets/gallery-1.jpg"
+               alt="Photo 1 — replace with a description of your picture">
+        </a>
+
+        <figcaption>
+          <h2>Photo One</h2>
+          <p>
+            Write a short caption explaining where this picture
+            was taken and why you included it.
+          </p>
+        </figcaption>
+      </figure>
+
+      <!-- PHOTO 2: Replace the title, description, and alt text. -->
+      <figure class="photo-card">
+        <a href="assets/gallery-2.jpg"
+           target="_blank"
+           rel="noopener">
+          <img src="assets/gallery-2.jpg"
+               alt="Photo 2 — replace with a description of your picture"
+               loading="lazy">
+        </a>
+
+        <figcaption>
+          <h2>Photo Two</h2>
+          <p>
+            Write a short caption about the experience,
+            activity, or project shown here.
+          </p>
+        </figcaption>
+      </figure>
+
+      <!-- PHOTO 3: Replace the title, description, and alt text. -->
+      <figure class="photo-card">
+        <a href="assets/gallery-3.jpg"
+           target="_blank"
+           rel="noopener">
+          <img src="assets/gallery-3.jpg"
+               alt="Photo 3 — replace with a description of your picture"
+               loading="lazy">
+        </a>
+
+        <figcaption>
+          <h2>Photo Three</h2>
+          <p>
+            Write a short caption describing this picture
+            and what it means to you.
+          </p>
+        </figcaption>
+      </figure>
+
+    </section>
+  </main>
+
+  <footer>
+    <span>Ishani Deshpande</span>
+    <span>Computer Engineering · Georgia Tech</span>
+  </footer>
+</body>
+</html>
